@@ -1,12 +1,23 @@
 <%- include('./partials/header.ejs');-%>
     <%- include('./partials/nav.ejs');-%>
         <div class="row">
-            <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+            <nav class="col-md-2 d-none d-md-block sidebar">
                 <div class="sidebar-sticky">
                     <div class="col-12">
                         <h2>User Profile</h2>
                         <hr>
                         <p>User's current details</p>
+                        <div class="text-center">
+                            <img class="employee_img" src="img/ceo.svg" alt="Image placeholder">
+                        </div>
+                        <br>
+                        <div class="text-center">
+                            <p class=""> Name </p>
+                            <p class=""> Gender </p>
+                            <p class=""> Email </p>
+                            <p class=""> Phone </p>
+                            <p class=""> Position </p>
+                        </div>
                     </div>
                 </div>
             </nav>
@@ -19,8 +30,12 @@
                         <p>Below are a list of created for you by the Managing Director.</p>
                     </div>
                     <% if(tasks.length < 1){ %>
-                        <div class="col-12">
-                            No Tasks For This Person.
+                        <div class="col-12 text-center">
+                            <br><br><br>
+                            <img class="sessionImg" src="img/cookies.svg" alt="">
+                            <br><br><br>
+                            <h2>Sessioned Timed Out</h2>
+                            <a class="mute" href="/login">Please login and try again.</a>
                         </div>
                         <%}else{%>
                             <div class="col-12 table-responsive">
