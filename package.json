@@ -1,0 +1,34 @@
+{
+  "name": "easysoft",
+  "version": "1.0.0",
+  "description": "Simple web application",
+  "main": "app.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.0.2",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "mongoose": "^5.9.9",
+    "uuid": "^7.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SedemQuame/EasySoft.git"
+  },
+  "author": "SedemQuame",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SedemQuame/EasySoft/issues"
+  },
+  "homepage": "https://github.com/SedemQuame/EasySoft#readme"
+}

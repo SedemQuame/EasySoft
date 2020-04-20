@@ -1,0 +1,93 @@
+<%- include('./partials/header.ejs');-%>
+    <%- include('./partials/nav.ejs');-%>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-8">
+                    <div class="col-12">
+                        <h2>Progress Viewer</h2>
+                        <hr>
+                        <p>Use the form below, to create a task for an employee as the manager.</p>
+                        <select class="custom-select" id="Employee ID" name="employeeId">
+                        <option value="" disabled selected>Please choose an EasySoft Employee</option>
+                        <% for(let i = 0; i < users.length; i++){ %>
+                            <option value="<%= users[0]._id %>"><%= users[0].name %></option>
+                            <% } %>
+                        </select>
+                        <table class="table table-striped table-sm">
+                            <thead>
+                                <tr>
+                                    <th class="th-sm">Task #</th>
+                                    <th class="th-sm">Title</th>
+                                    <th class="th-sm">Description</th>
+                                    <th class="th-sm">Start Time</th>
+                                    <th class="th-sm">Deadline</th>
+                                    <th class="th-sm">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <%for(let j = 0; j < todos.length; j++){%>
+                                    <tr>
+                                        <td>
+                                            <%= j+1 %>
+                                        </td>
+                                        <td>
+                                            <%= todos[j].title%>
+                                        </td>
+                                        <td>
+                                            <%= todos[j].description%>
+                                        </td>
+                                        <td>
+                                            <%= todos[j].start_time%>
+                                        </td>
+                                        <td>
+                                            <%= todos[j].deadline%>
+                                        </td>
+                                        <td>
+                                            <%= todos[j].status%>
+                                        </td>
+                                    </tr>
+                                    <%}%>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <main role="main" class="col-12 col-md-4">
+                    <div class="col-12 text-left">
+                        <h2>Task Creator </h2>
+                        <hr>
+                        <p class="">Create a task for the employees.</p>
+
+                        <form class="text-center" action="/createTodo" method="post">
+                            <select class="custom-select" id="Employee ID" name="employeeId">
+                                <option value="" disabled selected>Please choose an EasySoft Employee</option>
+                                <% for(let i = 0; i < users.length; i++){ %>
+                                    <option value="<%= users[0]._id %>"><%= users[0].name %></option>
+                                    <% } %>
+                            </select>
+                            <div class="md-form">
+                                <input type="text" id="title" class="form-control" name="title">
+                                <label for="title">Task Title</label>
+                            </div>
+                            <div class="md-form">
+                                <input type="text" id="description" class="form-control" name="description">
+                                <label for="description">Description</label>
+                            </div>
+                            <div class="md-form">
+                                <input type="date" id="start_time" class="form-control" name="start_time">
+                                <label for="start_time">Start Time</label>
+                            </div>
+                            <div class="md-form">
+                                <input type="date" id="deadline" class="form-control" name="deadline">
+                                <label for="deadline">Deadline</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="Submit" value="Submit" class="btn btn-primary">
+                            </div>
+                        </form>
+                    </div>
+
+                </main>
+            </div>
+        </div>
+        <%- include('./partials/footer'); -%>

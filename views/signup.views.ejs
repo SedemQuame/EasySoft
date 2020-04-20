@@ -1,0 +1,63 @@
+<%- include('./partials/header.ejs');-%>
+    <%- include('./partials/nav.ejs');-%>
+        <!-- signup portion -->
+        <div class="container">
+
+            <div class="row" id="signup_container">
+                <div class="col-12 offset-md-3 col-md-6 offset-md-3 login_or_sign_container">
+                    <h1 class="text-center">Sign Up</h1>
+                    <p class="text-center">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                    <!-- sign up forms -->
+                    <form action="/createNewUser" method="POST">
+                        <div class="md-form">
+                            <input type="text" id="full_name" class="form-control" name="full_name" required>
+                            <label for="full_name">Full name</label>
+                        </div>
+
+                        <div class="md-form">
+                            <input type="text" id="email_address" class="form-control" name="email_address" required>
+                            <label for="email_address">Email address</label>
+                        </div>
+
+                        <div class="md-form">
+                            <input type="text" id="phone_number" class="form-control" name="phone_number" required>
+                            <label for="phone_number">Phone number</label>
+                        </div>
+
+                        <div class="md-form">
+                            <input type="date" id="date_of_birth" class="form-control" name="date_of_birth" required>
+                            <label for="date_of_birth">Date Of Birth</label>
+                        </div>
+
+                        <div class="md-form">
+                            <input type="text" id="gender" class="form-control" name="gender" required>
+                            <label for="gender">Gender</label>
+                        </div>
+
+                        <div class="md-form">
+                            <input type="password" id="password" class="form-control" name="password" required>
+                            <label for="password">Password</label>
+                        </div>
+
+                        <div class="md-form">
+                            <input type="password" id="confirm_password" class="form-control" name="confirm_password" required>
+                            <label for="confirm_password">Confirm password</label>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="Submit" value="Submit" class="btn btn-primary">
+                        </div>
+                    </form>
+
+                    <!-- show login button -->
+                    <p class="text-center">
+                        <a class="" href="/login">
+                               Already got an account? <br> Login
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <%- include('./partials/footer'); -%>

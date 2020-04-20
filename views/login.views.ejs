@@ -1,0 +1,35 @@
+<%- include('./partials/header.ejs');-%>
+    <%- include('./partials/nav.ejs');-%>
+        <!-- login portion -->
+        <div class="container">
+
+            <div class="row" id="login_container">
+                <div class="col-12 offset-md-3 col-md-6 offset-md-3 login_or_sign_container">
+                    <h1 class="text-center">Login</h1>
+                    <p class="text-center">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                    <!-- login forms -->
+                    <form action="/logIntoUserAccount" method="POST">
+                        <!-- Material input -->
+                        <div class="md-form">
+                            <input type="text" id="email_address" class="form-control" name="email_address">
+                            <label for="email_address">Email address</label>
+                        </div>
+                        <div class="md-form">
+                            <input type="text" id="password" class="form-control" name="password">
+                            <label for="password">Password</label>
+                        </div>
+                        <div class="form-group"><input type="Submit" value="Submit" class="btn btn-primary"></div>
+                    </form>
+                    <!-- show signup button -->
+                    <p class="text-center">
+                        <a class="" href="/signup">
+                             Don't have an account? <br> Sign up
+                        </a>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+        <%- include('./partials/footer'); -%>
